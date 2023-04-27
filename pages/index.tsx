@@ -1,15 +1,12 @@
-import Head from 'next/head'
 import {
-  Container,
-  Main,
-  Title,
-  Description,
-  CodeTag,
+  Main
 } from '../components/sharedstyles'
-import Cards from '../components/cards'
+
+import Link from 'next/link';
 
 import useSWR from 'swr'
 import BookList from '../components/BookList'
+import styled from "styled-components"
 
 
 // function to fetch a particular url and return the data as json
@@ -40,9 +37,14 @@ export default function Home() {
     // <Container>
       <Main>
         <h1> Betterreads</h1>
+          <p>Check out all authors <A><Link href="../Authors">here!</Link></A></p>
         <BookList books={data} />
         
       </Main>
     // </Container>
   )
 }
+
+const A = styled.div`
+    color: blue;
+`
