@@ -4,7 +4,7 @@ import { cwd } from 'process'
 
 export default async function handler(req, res) {
     // get the path that was entered that includes the title
-    const {title} = req.query
+    const {author} = req.query
     // get the path to the json directory
     const jsonDirectory = path.join(process.cwd(), 'json')
     // read in the contents from our json file
